@@ -1,5 +1,8 @@
 # docker_lamp
 
+## 説明
+dockerを利用したLAMP環境構築の自動化
+
 ## 使い方
 
 ```
@@ -11,13 +14,13 @@ docker-compose up -d --build
 
 ## 環境
 
-- ### php-apache
+### php-apache
 
 DocumentRoot -> ./php-apache/src
 
 php.ini -> ./php-apache/config
 
-- ### ports
+### ports
 
 | container  | port        | 
 |:-----------|------------:|
