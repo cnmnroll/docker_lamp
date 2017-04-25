@@ -1,0 +1,24 @@
+version: '2'
+services:
+  mysql:
+    container_name: "mysql"
+    build: ./mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root #password
+      MYSQL_DATABASE: app #database name
+    volumes:
+      #      - ./mysql/data:/var/lib/mysql #dataの永続化
+      - ./mysql/init:/docker-entrypoint-initdb.d #初期化sqlディレクトリ
+  php-apache:
+    container_name: "apache"
+    build: ./php-apache
+    links:
+     - mysql
+    ports:
+      - "4533:80"
+    environment:
+      ENV PHP_INI_DIR: /usr/local/etc/php
+    volumes:
+      - ./php-apache/src:/var/www/html
