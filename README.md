@@ -7,7 +7,7 @@ git clone git@github.com:cnmnroll/docker_lamp.git
 docker-compose up -d --build
 ```
 
-ブラウザ -> http://localhost:4453 
+ブラウザ -> http://localhost:4533 
 
 ## 環境
 
