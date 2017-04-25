@@ -7,13 +7,18 @@ git clone git@github.com:cnmnroll/docker_lamp.git
 docker-compose up -d --build
 ```
 
+ブラウザ -> http://localhost:4453 
+
 ## 環境
-### php-apache
+
+- ### php-apache
+
 DocumentRoot -> ./php-apache/src
 
 php.ini -> ./php-apache/config
 
-### ports
+- ### ports
+
 | container  | port        | 
 |:-----------|------------:|
 | php-apache | 4533        | 
